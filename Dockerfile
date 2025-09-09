@@ -1,14 +1,16 @@
-# Base 
 FROM python:3.10-slim
 
-# Install required tools
+# Install tools
 RUN apt-get update && apt-get install -y curl tar && rm -rf /var/lib/apt/lists/*
 
-# set dir
+# Workdir
 WORKDIR /app
 
-# Copy 
-COPY miner.py /app/miner.py
+# Copy scripts
+COPY mine.py server.py /app/
 
-# Run scripts
-CMD ["python", "mine.py"]
+# Install Flask
+RUN pip install flask
+
+# Run 
+CMD ["python", "server.py"]
