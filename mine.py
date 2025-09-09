@@ -8,7 +8,7 @@ import multiprocessing
 # CONFIGURATION
 # =======================
 POOL = "pool.supportxmr.com:3333"   # Monero pool
-WALLET = "YOUR_MONERO_WALLET"      # <-- Replace with your wallet
+WALLET = "4AsN61jeoBUfdLrYuH3KsjhGHuCpA9h1A63CMu6T7vjufJEhxg5RNRwHyN13Fc4MA1M1puUBDy7wxbD39h8KeArFJUPVFRo"      # <-- Replace with your wallet
 WORKER = "render-free"             # Worker name for pool stats
 DONATE = "1"                       # Default XMRig donate level (1%)
 
