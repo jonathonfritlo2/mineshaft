@@ -1,14 +1,11 @@
 
-FROM python:3.10-slim
+FROM python:3.10-slimFROM python:3.10-slim
 
-# Install 
 RUN apt-get update && apt-get install -y curl tar && rm -rf /var/lib/apt/lists/*
 
-# Working directory
 WORKDIR /app
+COPY miner.py server.py /app/
 
-# d
-COPY miner.py /app/miner.py
+RUN pip install flask
 
-# d
-CMD ["python", "mine.py"]
+CMD ["python", "server.py"]
